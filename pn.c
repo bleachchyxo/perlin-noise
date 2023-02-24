@@ -34,3 +34,19 @@ int main()
                                 if (grid[y][x]>=elevation_levels[i].range[0] && grid[y][x] < elevation_levels[i].range[1]) {
                                         elevation_value=elevation_levels[i].value;
                                         break;
+                                }
+                        }
+                        grid[y][x] = elevation_value;
+                }
+        }
+
+        for(int y=0;y<height;y++){
+                for(int x=0;x<width;x++){
+                        printf("%d ", (int) grid[y][x]);
+                }
+                printf("\n");
+        }
+
+        return 0;
+
+}
